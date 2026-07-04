@@ -3,11 +3,13 @@
 const express = require("express");
 const noteModel = require("./models/note.model");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
 app.use(express.json()); //middleware
 app.use(cors()); // cross origin request bypass
+app.use(express.static('./public'))
 
 // post
 
@@ -60,6 +62,12 @@ app.patch("/api/notes/:id", async (req, res) => {
   res.status(200).json({
     message: "Note updated successfully",
   });
+});
+
+console.log(__dirname); // give the path
+app.use("*name", (req, res) => {
+  // res.send("This is wild card");
+  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 
 module.exports = app;

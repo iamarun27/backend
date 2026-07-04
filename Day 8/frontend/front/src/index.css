@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -41,4 +41,152 @@ html {
   border-radius: 0.7rem;
   max-width: 20rem;
   color: wheat;
+}
+
+.note-create-form{
+  display: flex;
+  gap: 1rem;
+  padding-inline: 1rem;
+  padding-block: 3rem;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Form */
+
+.note-create-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.note-create-form input {
+  width: 280px;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.12);
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.note-create-form input::placeholder {
+  color: #ddd;
+}
+
+.note-create-form input:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+.note-create-form input:focus {
+  border-color: #00e5ff;
+  box-shadow: 0 0 15px #00e5ff;
+}
+
+.note-create-form button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.note-create-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,114,255,.4);
+}
+
+/* Notes */
+
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Card */
+
+.note {
+  width: 260px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  transition: .3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+.note:hover {
+  transform: translateY(-8px);
+}
+
+.note h1 {
+  color: #00e5ff;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.note p {
+  color: #ddd;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+
+.note button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.note button:first-of-type {
+  background: #ff4d4d;
+}
+
+.note button:first-of-type:hover {
+  background: #ff1a1a;
+  transform: scale(1.08);
+}
+
+.note button:last-of-type {
+  background: #00c853;
+  margin-left: 10px;
+}
+
+.note button:last-of-type:hover {
+  background: #00a844;
+  transform: scale(1.08);
 }
