@@ -5,7 +5,7 @@ function App() {
   const [notes, setNotes] = useState([]);
   console.log("Hello integration");
   function fetchNotes() {
-    axios.get("http://localhost:3000/api/notes").then((res) => {
+    axios.get("https://backend-0au0.onrender.com/api/notes").then((res) => {
       setNotes(res.data.notes);
     });
   }
@@ -19,7 +19,7 @@ function App() {
     const { title, description } = e.target.elements;
     console.log(title.value, description.value);
     axios
-      .post("http://localhost:3000/api/notes", {
+      .post("https://backend-0au0.onrender.com/api/notes", {
         title: title.value,
         description: description.value,
       })
@@ -35,10 +35,12 @@ function App() {
 
   function handleDeleteNote(noteId) {
     console.log(noteId);
-    axios.delete("http://localhost:3000/api/notes/" + noteId).then((res) => {
-      console.log(res.data);
-      fetchNotes();
-    });
+    axios
+      .delete("https://backend-0au0.onrender.com/api/notes/" + noteId)
+      .then((res) => {
+        console.log(res.data);
+        fetchNotes();
+      });
   }
 
   // function handleUpdateNote(noteId) {
@@ -59,7 +61,7 @@ function App() {
     const newDescription = prompt("Enter new description", note.description);
 
     axios
-      .patch("http://localhost:3000/api/notes/" + note._id, {
+      .patch("https://backend-0au0.onrender.com/api/notes/" + note._id, {
         title: newTitle,
         description: newDescription,
       })
