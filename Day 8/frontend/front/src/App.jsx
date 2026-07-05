@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 function App() {
   const [notes, setNotes] = useState([]);
   console.log("Hello integration");
@@ -27,6 +26,10 @@ function App() {
       .then((res) => {
         console.log(res.data);
         fetchNotes();
+
+        // input field empty krne k liye
+
+        e.target.reset();
       });
   }
 
@@ -69,8 +72,13 @@ function App() {
   return (
     <>
       <form onSubmit={handleSubmit} className="note-create-form">
-        <input type="text" name="title" placeholder="enter title" />
-        <input type="text" name="description" placeholder="enter description" />
+        <input required type="text" name="title" placeholder="userName" />
+        <input
+          required
+          type="text"
+          name="description"
+          placeholder="userDescription"
+        />
         <button>Create Note</button>
       </form>
       <div className="notes">

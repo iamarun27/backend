@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json()); //middleware
 app.use(cors()); // cross origin request bypass
-app.use(express.static('./public'))
+app.use(express.static("./public")); // folder k andar publically access krne k liye
 
 // post
 
@@ -56,15 +56,16 @@ app.delete("/api/notes/:id", async (req, res) => {
 app.patch("/api/notes/:id", async (req, res) => {
   const id = req.params.id;
   const { description } = req.body;
+  const { title } = req.body;
 
-  await noteModel.findByIdAndUpdate(id, { description });
+  await noteModel.findByIdAndUpdate(id, { description, title });
 
   res.status(200).json({
     message: "Note updated successfully",
   });
 });
 
-console.log(__dirname); // give the path
+//console.log(__dirname); // give the path
 app.use("*name", (req, res) => {
   // res.send("This is wild card");
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));

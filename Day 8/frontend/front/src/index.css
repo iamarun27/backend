@@ -190,3 +190,131 @@ body {
   background: #00a844;
   transform: scale(1.08);
 }
+
+
+/* ==========================
+   Laptop (1024px and below)
+========================== */
+
+@media (max-width: 1024px) {
+  .note-create-form {
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .note-create-form input {
+    width: 45%;
+  }
+
+  .notes {
+    gap: 20px;
+  }
+
+  .note {
+    width: 300px;
+  }
+}
+
+/* ==========================
+   Tablet (768px and below)
+========================== */
+
+@media (max-width: 768px) {
+  .note-create-form {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .note-create-form input,
+  .note-create-form button {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .notes {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .note {
+    width: 90%;
+    max-width: 450px;
+  }
+
+  .note h1 {
+    font-size: 28px;
+  }
+}
+
+/* ==========================
+   Mobile (480px and below)
+========================== */
+
+@media (max-width: 480px) {
+  .note-create-form {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+
+  .note-create-form input,
+  .note-create-form button {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .notes {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .note {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .note h1 {
+    font-size: 24px;
+  }
+
+  .note p {
+    font-size: 15px;
+  }
+
+  .note button {
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  .note button:last-of-type {
+    margin-left: 0;
+  }
+}
+
+/* ==========================
+   Large Monitor (1440px+)
+========================== */
+
+@media (min-width: 1440px) {
+  .notes {
+    max-width: 1500px;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .note {
+    width: 320px;
+  }
+
+  .note-create-form {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .note-create-form input {
+    width: 350px;
+  }
+}
