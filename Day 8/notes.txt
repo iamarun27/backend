@@ -1,0 +1,13 @@
+Authentication :  identify krna ki request kis user se ayi h
+
+Authorization : kon kya - kya access kr skta h
+
+
+Validation : check format
+
+
+Verification : data shi h ya nhi
+
+
+JWT_SECRET
+
