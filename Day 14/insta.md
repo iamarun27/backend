@@ -1,11 +1,13 @@
 - Authentication
   register (user ka data save krna, token user ko dena)
-  login
+  login 
   logout (token backlisting)
   [otp based registration]
 
 - Post
-   create
+   create = [
+      caption string, imgurl string, user userOD, createdate:Date,
+   ]
    can see the feed
    like posts (collection types)
    save posts
