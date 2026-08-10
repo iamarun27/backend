@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 // post
 
 app.post("/notes", (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   notes.push(req.body);
   console.log(notes);
 
@@ -35,7 +35,7 @@ app.get("/notes", (req, res) => {
 });
 
 // delete
-// params
+// params : means dynamic
 
 app.delete("/notes/:index", (req, res) => {
   // console.log(req.params.index);
@@ -44,6 +44,8 @@ app.delete("/notes/:index", (req, res) => {
   res.send("note deleted successfully...");
 });
 
+// req.body = {description : - sample modified description}
+
 app.patch("/notes/:index", (req, res) => {
   notes[req.params.index].description = req.body.description;
   notes[req.params.index].title = req.body.title;
@@ -51,3 +53,4 @@ app.patch("/notes/:index", (req, res) => {
 });
 
 module.exports = app;
+

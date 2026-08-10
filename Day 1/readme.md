@@ -17,8 +17,11 @@ eg, instagram post methods
 
 - Create server with express
 npm init -y : show node js application start krne bale h
-expresss server banane deta h
+expresss server banane deta h npm i express
 express is a package
+
+
+- node app.js
 
 
 
@@ -31,3 +34,7 @@ express is a package
 package.json - js-code kon kon se packages p depend krta h
 node_module - store packages 
 package-lock.json - show further dependencies  
+
+packages = code jise hmne nhi likha , public kr diya and other an use.
+npmjs.com
+cat-me

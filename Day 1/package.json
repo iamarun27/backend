@@ -4,7 +4,8 @@
   "description": "- How to run script outide the browser\r   node index.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"npx nodemon app.js "
   },
   "keywords": [],
   "author": "",
