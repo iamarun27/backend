@@ -24,6 +24,7 @@ app.post("/notes", async (req, res) => {
   });
 });
 
+
 // get
 // fetch all the data
 

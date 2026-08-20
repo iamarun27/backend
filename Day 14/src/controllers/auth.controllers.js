@@ -20,6 +20,8 @@ async function registerController(req, res) {
   //   });
   // }
 
+  // single call
+
   const isUserAlreadyExists = await userModel.findOne({
     $or: [{ username }, { email }],
   });

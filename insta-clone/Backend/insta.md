@@ -24,3 +24,8 @@ user ={
    followers:Array,
    profile_image:String
 }
+
+
+middleware - to reduce repitive tasks
+
+edge collections , 

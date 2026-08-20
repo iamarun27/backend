@@ -1,5 +1,7 @@
 Authentication :  identify krna ki request kis user se ayi h
 
+user - register on application - register- req.body - a. user ka data save krna db m b. id create krna,user data k sath(token) uerdata k sath- user ko deta h response m - request k andr uska token hoga- ssignature with secret name JWT_SECRET     -----------------------                         server
+
 Authorization : kon kya - kya access kr skta h
 
 
@@ -10,4 +12,28 @@ Verification : data shi h ya nhi
 
 
 JWT_SECRET
+
+dotenv package
+npm i dotenv
+
+env masker exrension file secure
+cors policy implemented by browser on client side
+npmi cors in backend
+app.use(cors()); // cross origin request bypass
+
+without useeffect - ja  bhi app render hoga hr bar chlegaa
+
+front end k andr = npm run build - pura code dega in html,css,js dist name ka folder bnegaa
+- ffiles ko move kro in backend in public  including assets.
+app.use('*name',(req,res)=>{
+  res.send('this is wild card')  jo api nhi bni unhe handle kregaa
+})
+app.use("*name", (req, res) => {
+  // res.send("This is wild card");
+  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+});
+
+app.use(express.static("./public")); // folder k andar publically access krne k liye
+const path = require("path");
+
 

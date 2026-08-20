@@ -5,6 +5,8 @@ const crypto = require("crypto");
 
 const authRouter = express.Router();
 
+//api/auth/register
+
 authRouter.post("/register", async (req, res) => {
   const { email, name, password } = req.body;
 
@@ -24,6 +26,8 @@ authRouter.post("/register", async (req, res) => {
     name,
   });
 
+  // token create userdate + jwt secret
+
   const token = jwt.sign(
     {
       id: user._id,
@@ -41,8 +45,10 @@ authRouter.post("/register", async (req, res) => {
   });
 });
 
+// api/auth/protected
+
 authRouter.post("/protected", (req, res) => {
-  console.log(req.cookies);
+  // console.log(req.cookies);
   res.status(200).json({
     message: "This is protected route...",
   });

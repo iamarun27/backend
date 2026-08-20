@@ -16,11 +16,15 @@ authRouter.post("/register", async (req, res) => {
     });
   }
 
+
+  // database m stote krna
   const user = await userModel.create({
     name,
     email,
     password: crypto.createHash("sha256").update(password).digest("hex"),
   });
+
+  // crete token
 
   const token = jwt.sign(
     {
@@ -29,6 +33,8 @@ authRouter.post("/register", async (req, res) => {
     process.env.JWT_SECRET,
     { expiresIn: "1h" },
   );
+
+  // server can access cookies
   res.cookie("token", token);
 
   res.status(201).json({
@@ -42,6 +48,8 @@ authRouter.post("/register", async (req, res) => {
 
 authRouter.get("/get-me", async (req, res) => {
   const token = req.cookies.token;
+
+  // data verify - token
 
   const decoded = jwt.verify(token, process.env.JWT_SECRET);
 

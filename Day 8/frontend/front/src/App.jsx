@@ -3,7 +3,7 @@ import axios from "axios";
 
 function App() {
   const [notes, setNotes] = useState([]);
-  console.log("Hello integration");
+  // console.log("Hello integration");
   function fetchNotes() {
     axios.get("https://backend-0au0.onrender.com/api/notes").then((res) => {
       setNotes(res.data.notes);

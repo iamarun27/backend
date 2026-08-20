@@ -1,0 +1,31 @@
+Authentication -> Request kon kr rha h
+user kon h  
+server - user data save krna db m , token create krna user data k sath 
+
+Aithorization -> kon kya access kr skta h
+
+Validation -> Data ka format check krna
+
+Verification -> data shi h ye nhi
+
+jwt_secret - 
+npm i jsonwebtoken
+https://jwtsecrets.com/
+https://www.jwt.io/
+
+jwtsecret.com - large key large ecurity - more processing power
+paste n .env file
+
+storages : cookies - client side
+npm i cookieparser
+
+
+bcrypt.js - 
+
+batabase breach - unauthorized user can access data
+
+bassword hash krna - md5 hash generator 
+properties - 1. same input same output
+2. reverse not valid 
+plain text ------------- hash text
+crypto 

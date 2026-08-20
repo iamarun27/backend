@@ -1,4 +1,8 @@
 CRUD in Database
+2 layers of security
+database and network
+
+
 
 
 arun  CX6DcLtXmgSpzjfu
@@ -15,3 +19,9 @@ note
 }
 
 crud operation perform krns k liye
+
+express , mongoose
+
+config m database ka code hota h
+models m schema hota h
+

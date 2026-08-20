@@ -3,6 +3,7 @@ DATABASE -
 types of servers
 web servers - 
 cloud => mongodb Atlas
+string -> it connects to the compass.
 
 YCjDRaX0CT3TBfVS
 

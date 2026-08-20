@@ -40,7 +40,7 @@ async function createPostController(req, res) {
   const post = await postModel.create({
     caption: req.body.caption,
     imgUrl: file.url,
-    user: req.user.id,
+    user: req.user.id, // middlewate
   });
 
   res.status(201).json({

@@ -9,6 +9,7 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: [true, "imgUrl is required to create a post"],
   },
+  // identify the user
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "users",
