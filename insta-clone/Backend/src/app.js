@@ -1,10 +1,12 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const morgan = require('morgan')
 
 const app = express();
 app.use(express.json()); // only for raw data
 app.use(cookieParser());
+app.use(morgan('dev'))
 app.use(
   cors({
     credentials: true,

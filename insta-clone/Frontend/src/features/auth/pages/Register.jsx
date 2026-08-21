@@ -10,17 +10,21 @@ const Register = () => {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    axios
-      .post("http://localhost:3000/api/auth/register", {
-        username,
-        email,
-        password,
-      },{
-        withCredentials:true
-      })
-      .then((res) => {
-        console.log(res.data);
-      });
+    // axios
+    //   .post(
+    //     "http://localhost:3000/api/auth/register",
+    //     {
+    //       username,
+    //       email,
+    //       password,
+    //     },
+    //     {
+    //       withCredentials: true,
+    //     },
+    //   )
+    //   .then((res) => {
+    //     console.log(res.data);
+    //   });
   }
   return (
     <main>
@@ -33,7 +37,7 @@ const Register = () => {
             }}
             type="text"
             name="username"
-            placeholder="enter username"
+            placeholder="Enter username"
           />
           <input
             onInput={(e) => {
@@ -41,7 +45,7 @@ const Register = () => {
             }}
             type="email"
             name="email"
-            placeholder="enter email"
+            placeholder="Enter email"
           />
           <input
             onInput={(e) => {
