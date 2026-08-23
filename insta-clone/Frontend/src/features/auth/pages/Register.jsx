@@ -1,14 +1,27 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import axios from "axios";
+import { useAuth } from "../hooks/useAuth";
 
 const Register = () => {
+  const { loading, handleRegister } = useAuth();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
   async function handleSubmit(e) {
     e.preventDefault();
+    await handleRegister(username,email,password)
+    navigate('/')
+
+    if (loading) {
+      return (
+        <main>
+          <h1>Loading...</h1>
+        </main>
+      );
+    }
 
     // axios
     //   .post(
@@ -32,7 +45,7 @@ const Register = () => {
         <h1>Register</h1>
         <form onSubmit={handleSubmit}>
           <input
-            onInput={(e) => {
+            onChange={(e) => {
               setUsername(e.target.value);
             }}
             type="text"
@@ -40,7 +53,7 @@ const Register = () => {
             placeholder="Enter username"
           />
           <input
-            onInput={(e) => {
+            onChange={(e) => {
               setEmail(e.target.value);
             }}
             type="email"
@@ -48,7 +61,7 @@ const Register = () => {
             placeholder="Enter email"
           />
           <input
-            onInput={(e) => {
+            onChange={(e) => {
               setPassword(e.target.value);
             }}
             type="password"
