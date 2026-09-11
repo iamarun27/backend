@@ -1,0 +1,24 @@
+socket.io - 
+
+user-A                -  Server                        -  user-B
+
+chat application creation
+dono user bat kr rhe h and server maintain history of both
+b puchh rha h mid-sem kb se h
+msg a tk nhi ja skta 
+server is the middlemen
+
+server p load pdta h 
+
+
+i case of sockt io
+dono user server se connect ho jate h
+connection close nhi krte
+baaar baar request nhi krna pdta server p
+
+
+io = server
+socket = single user
+
+on => event ko listen krna 
+emit - event ko fire krna 
