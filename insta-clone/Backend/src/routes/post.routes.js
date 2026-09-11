@@ -26,6 +26,9 @@ postRouter.get(
 // likes
 postRouter.post('/like/:postId',identifyUser,postController.likePostController)
 
+//  dislike
+postRouter.post('/unlike/:postId',identifyUser,postController.unLikePostController)
+
 // posts/feed
 // get all the posts created in the db
 // access - private

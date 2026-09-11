@@ -16,6 +16,8 @@ ek machine jis k pas khud ka processor, ram, os,storage - everyone can access gl
 eg, instagram post methods
 
 - Create server with express
+
+
 npm init -y : show node js application start krne bale h
 expresss server banane deta h npm i express
 express is a package
