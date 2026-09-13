@@ -16,6 +16,8 @@
     "@langchain/mistralai": "^1.2.0",
     "dotenv": "^17.4.2",
     "langchain": "^1.5.11",
-    "readline-sync": "^1.4.10"
+    "nodemailer": "^10.0.9",
+    "readline-sync": "^1.4.10",
+    "zod": "^4.6.4"
   }
 }
