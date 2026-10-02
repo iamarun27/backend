@@ -60,7 +60,7 @@ const embeddings = new MistralAIEmbeddings({
 //console.log(docs); //1024
 
 
-const queryEmbedding = await embeddings.embedQuery("who is arav?")
+const queryEmbedding = await embeddings.embedQuery("what was the final year confusion?")
 console.log(queryEmbedding)
 const result = await index.query({
   vector:queryEmbedding,

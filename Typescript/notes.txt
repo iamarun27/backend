@@ -1,0 +1,13 @@
+why ?
+npm init -y
+npm i typescript --save-dev
+npx tsc --init
+
+
+void , never - function will never end
+
+type- 
+
+// any, unknown 
+
+
