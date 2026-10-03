@@ -1,10 +1,15 @@
 FROM node:20-alpine
 
-COPY ./package.json .
-COPY ./package-lock.json .
+WORKDIR /app
 
-RUN npm install
+COPY ./package.json /app
+COPY ./package-lock.json /app
+# // image creation time
 
-COPY ./server.js .
+RUN npm install  
 
+COPY ./server.js . /app
+
+
+# image run time
 CMD ["node","server.js"]
